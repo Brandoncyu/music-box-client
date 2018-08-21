@@ -18,6 +18,7 @@ class ArtistForm extends Component {
   onSubmit = (event) => {
     event.preventDefault()
     console.log(this.state)
+    this.props.addArtist(this.state.name, this.state.genre)
     this.setState({ name: '', genre: '' })
   }
 
